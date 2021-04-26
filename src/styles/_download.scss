@@ -1,0 +1,100 @@
+//Download
+#Download {
+  background: url('../images/preuzmi_background.png') no-repeat bottom;
+  .preuzmi {
+    @include flexCenter(column);
+    .download-icon {
+      @include iconDef();
+      background: $mainYellow;
+      .download-icon-child {
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    }
+    .download-text {
+      margin-top: 20px;
+      @include flexCenter(column);
+      .download-title {
+        @include BigTitle();
+        .download-title-span {
+          color: $mainYellow;
+          text-decoration: underline;
+        }
+      }
+      .download-subtitle {
+        @include subBigTitle();
+      }
+      .download-one,
+      .download-title,
+      .download-subtitle {
+        margin: 10px 0;
+      }
+    }
+    .phone {
+      position: relative;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      .preuzmiApk {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        top: 285px;
+        animation: Slide 2s 1;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+        .preuzmi-btn {
+          @include flexCenter(column);
+          background: rgb(240, 105, 22);
+          background: linear-gradient(
+            20deg,
+            rgba(240, 105, 22, 1) 0%,
+            rgba(38, 38, 38, 1) 87%
+          );
+          border-radius: 8px;
+          height: 72px;
+          width: 268px;
+          color: $mainWhite;
+          margin: 5px;
+          cursor: pointer;
+          p {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #Download {
+    .preuzmi {
+      .download-text {
+        text-align: justify;
+        .download-title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #Download {
+    .preuzmi {
+      .download-text {
+        margin-top: 10px;
+        text-align: center;
+      }
+      .phone {
+        .preuzmiApk {
+          flex-direction: column;
+          top: 200px;
+        }
+      }
+    }
+  }
+}

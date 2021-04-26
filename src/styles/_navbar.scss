@@ -1,0 +1,30 @@
+//NavBar
+#NavBar {
+  text-align: center;
+  .navbar {
+    .navbar-brend {
+      a {
+        .is-active {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .navbar-item img {
+    max-height: 4rem;
+  }
+  .nav-text {
+    font-size: 15px;
+  }
+  .icons {
+    width: 50px;
+    border: 1px solid #e7e7e7;
+    margin: 0 5px;
+    padding: 12px 14px 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .navbar-end .navbar-item {
+    @include flexCenter(row);
+  }
+}

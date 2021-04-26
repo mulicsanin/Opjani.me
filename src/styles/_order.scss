@@ -1,0 +1,114 @@
+//Order
+#Order {
+  .order-img {
+    padding: 0;
+  }
+  .order {
+    display: flex;
+    justify-content: center;
+
+    .order-icon {
+      @include iconDef();
+      .order-icon-child {
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    }
+    .orangeBg {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      background-color: $bgYellow;
+      padding: 50px;
+      border-radius: 16px;
+    }
+    .order-text {
+      .order-one {
+        @include small(rgba(49, 67, 78, 0.1), $mainDark);
+        min-width: 360px;
+        max-width: 360px;
+        margin-top: 40px;
+      }
+      .order-title {
+        @include SmallTitle();
+        .order-title-span {
+          color: $mainYellow;
+          text-decoration: underline;
+        }
+      }
+      .order-subtitle {
+        @include subBigTitle();
+        margin-top: 10px;
+      }
+      .order-t {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+        margin: 15px 0;
+      }
+      .preuzmi-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $mainDark;
+        border-radius: 8px;
+        height: 72px;
+        width: 280px;
+        color: $mainWhite;
+        margin-top: 30px;
+        cursor: pointer;
+        p {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #Order {
+    .order-one {
+      margin: 40px auto 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #Order {
+    .order {
+      .orangeBg {
+        align-items: center;
+        .order-icon {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .order-text {
+          text-align: justify;
+          .preuzmi-btn {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .order-one {
+            text-align: center;
+          }
+          .order-title {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 421px) {
+  #Order {
+    .order {
+      .orangeBg {
+        padding: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+//Header
+#Header {
+  position: relative;
+  @include flexCenter(column);
+  overflow: hidden;
+  .header-text {
+    text-align: center;
+    margin-top: 100px;
+    @include flexCenter(column);
+    .header-one {
+      @include small(rgba(255, 174, 53, 0.14), $mainYellow);
+    }
+    .header-title {
+      @include BigTitle();
+      .header-title-span {
+        color: $mainYellow;
+        text-decoration: underline;
+      }
+    }
+    .header-subtitle {
+      font-size: 100px;
+      @include subBigTitle();
+    }
+    .header-one,
+    .header-title,
+    .header-subtitle {
+      margin: 10px 0;
+    }
+  }
+  .phones {
+    margin: 50px 0 0 50px;
+    position: relative;
+    .phone1,
+    .phone2,
+    .phone3,
+    .phone4 {
+      position: relative;
+    }
+    .phone1 {
+      left: 80px;
+      animation: Slide 1.5s 1;
+      animation-delay: 2s;
+      animation-fill-mode: backwards;
+    }
+    .phone2 {
+      animation: Slide 2.5s 1;
+    }
+    .phone3 {
+      animation: Slide 2s 1;
+      right: 10px;
+    }
+    .phone4 {
+      right: 90px;
+      z-index: -1;
+      animation: Slide 1s 1;
+      animation-delay: 2s;
+      animation-fill-mode: backwards;
+    }
+  }
+  .preuzmiApk {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    top: 50%;
+    left: 16%;
+    animation: Slide 2s 1;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+    .preuzmi-btn {
+      @include flexCenter(column);
+      background: $mainDark;
+      border-radius: 8px;
+      height: 72px;
+      width: 268px;
+      color: $mainWhite;
+      margin: 5px;
+      cursor: pointer;
+      p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #Header {
+    .header-text {
+      margin-top: 15px;
+    }
+    .phones {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      margin: 0;
+      .phone1,
+      .phone4 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #Header {
+    .header-text {
+      text-align: center;
+    }
+    .preuzmiApk {
+      left: auto;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

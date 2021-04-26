@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+$mainYellow: #ffae35;
+$mainDark: #31434e;
+$mainWhite: #ffffff;
+
+$bgYellow: #fff3e1;
+$bgDark: #eaeced;
+
+@mixin flexCenter($dir) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin BigTitle {
+  font-weight: bold;
+  font-size: 4.5rem;
+  line-height: 130%;
+}
+@mixin subBigTitle {
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+@mixin SmallTitle {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 130%;
+}
+
+@mixin iconDef {
+  background: $mainDark;
+  padding: 10px 16px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  animation: Bounce 1s infinite alternate;
+}
+
+@mixin small($clr, $txt) {
+  background: $clr;
+  border-radius: 8px;
+  color: $txt;
+  padding: 5px;
+}
+@import '~bulma/bulma.sass';
+
+@keyframes Slide {
+  0% {
+    transform: translateY(100%) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%) scale(0.95);
+    opacity: 1;
+  }
+}
+
+@keyframes Bounce {
+  to {
+    transform: scale(1.2);
+  }
+}
+
+//styles
+@import '../styles/header';
+@import '../styles/navbar';
+@import '../styles/look';
+@import '../styles/order';
+@import '../styles/location';
+@import '../styles/download';
+@import '../styles/footer';
+
+:root {
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before,
+body {
+  font-family: 'Barlow', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+svg {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 769px) {
+  :root {
+    font-size: 12px;
+  }
+  .br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  :root {
+    font-size: 8px;
+  }
+  @mixin iconDef() {
+    font-size: 10px;
+  }
+}

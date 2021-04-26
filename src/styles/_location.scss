@@ -1,0 +1,102 @@
+//Location
+#Location {
+  background: url(../images/mne-left.png) no-repeat left,
+    url('../images/mneRight.png') no-repeat 60rem;
+  background-size: contain;
+
+  .loc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .loc-icon {
+      @include iconDef();
+      background: $mainYellow;
+      .loc-icon-child {
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    }
+    .loc-text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .loc-one {
+        @include small(rgba(49, 67, 78, 0.1), $mainDark);
+        max-width: 270px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .loc-title {
+        @include SmallTitle();
+        .loc-title-span {
+          color: $mainYellow;
+          text-decoration: underline;
+        }
+      }
+      .loc-subtitle {
+        @include subBigTitle();
+        margin-top: 10px;
+      }
+      .loc-t {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+        margin: 15px 0;
+        .loc-t-span {
+          color: $mainYellow;
+          text-decoration: underline;
+        }
+      }
+      .loc-btn {
+        display: flex;
+        align-items: center;
+        .social-icon {
+          background-color: #ffffff;
+          border: 1px solid #e7e7e7;
+          margin-right: 10px;
+          padding: 12px 14px 6px 14px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          p {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #Location {
+    .loc {
+      align-items: center;
+      .loc-text {
+        text-align: center;
+        .loc-one {
+          margin: 40px auto 20px auto;
+        }
+        .loc-btn {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 421px) {
+  #Location {
+    .loc {
+      .loc-text {
+        .loc-one {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
