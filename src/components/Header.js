@@ -22,7 +22,7 @@ class Header extends React.Component {
               Provedite više vremena uživajući u trenutku.
             </p>
             <p className='header-title'>
-              Dostava pića za{' '}
+              Dostava pića{' '}
               <span className='header-title-span'>za svaku priliku!</span>
             </p>
             <p className='header-subtitle'>
